@@ -1,0 +1,12 @@
+Dossie 
+
+1. Capa 
+2. sumário 
+3. introdução
+    - do que se trata 
+    - objetivo 
+    - API's 
+4. perguntas(o que elas devem responder)
+5. D.E.R 
+6. Modelo relacional 
+7. Dicionario de dados

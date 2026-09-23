@@ -1,0 +1,769 @@
+\chapter{D.E.R.}\label{cap:resultados}
+
+% \lipsum[73]
+
+\section{Base de Dados}
+\begin{figure}[htpb]
+   \centering
+   \includegraphics[scale=.05]{figs/der}
+   \caption{Proposta de DER para o problema.}
+   \label{fig:der}
+\end{figure}
+
+
+\section{Dicionário de Dados}
+
+% \begin{flushleft}
+% \begin{longtable}{p{2.5cm} p{4.5cm} p{1.2cm} p{5.5cm} p{3.5cm}}
+% \caption{Dicionário de Dados} \\
+% \hline
+% \textbf{Entidade} &
+% \textbf{Campo} &
+% \textbf{Tipo} &
+% \textbf{Descrição} &
+% \textbf{Restrições/Observações} \\
+% \hline
+% \endfirsthead
+
+% \hline
+% \textbf{Entidade} &
+% \textbf{Campo} &
+% \textbf{Tipo} &
+% \textbf{Descrição} &
+% \textbf{Restrições/Observações} \\
+% \hline
+% \endhead
+
+% \textbf{ELEICAO} &
+% \texttt{cd\_eleicao} &
+% INT &
+% Identificador da eleição. &
+% Identificador da eleição no TSE. \\
+
+% &
+% \texttt{ano} &
+% INT &
+% Ano em que a eleição ocorreu. &
+% -- \\
+
+% &
+% \texttt{turno} &
+% INT &
+% Número do turno da eleição. &
+% 1 ou 2, conforme a eleição. \\
+
+% &
+% \texttt{tipo} &
+% INT &
+% Código do tipo de eleição. &
+% Código utilizado pelo TSE. \\
+
+% &
+% \texttt{ds\_eleicao} &
+% VARCHAR &
+% Descrição ou denominação da eleição. &
+% -- \\
+
+% &
+% \texttt{quantidade\_de\_vagas} &
+% INT &
+% Quantidade de vagas disponíveis no pleito para determinado cargo. &
+% -- \\
+
+% \textbf{CARGO} &
+% \texttt{cod\_cargo} &
+% INT &
+% Identificador do cargo eletivo. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{ds\_cargo} &
+% VARCHAR &
+% Descrição do cargo conforme a base eleitoral. &
+% -- \\
+
+% &
+% \texttt{nome} &
+% VARCHAR &
+% Nome padronizado do cargo. &
+% -- \\
+
+% \textbf{MUNICIPIO} &
+% \texttt{cd\_municipio} &
+% INT &
+% Código identificador do município na base eleitoral. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{nm\_municipio} &
+% VARCHAR &
+% Nome do município. &
+% -- \\
+
+% &
+% \texttt{cd\_ibge} &
+% INT &
+% Código do município segundo o IBGE. &
+% FK para identificação territorial no IBGE. \\
+
+% \textbf{UF} &
+% \texttt{cd\_ibge} &
+% INT &
+% Código identificador da unidade federativa segundo o IBGE. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{sigla} &
+% VARCHAR &
+% Sigla da unidade federativa. &
+% Ex.: PI, DF, SP. \\
+
+% \textbf{POLITICO} &
+% \texttt{cpf} &
+% VARCHAR &
+% CPF utilizado para identificar o político/candidato. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{nome} &
+% VARCHAR &
+% Nome do político. &
+% -- \\
+
+% &
+% \texttt{ds\_grau\_de\_instrucao} &
+% VARCHAR &
+% Grau de instrução declarado pelo candidato. &
+% Informação eleitoral. \\
+
+% &
+% \texttt{dt\_nascimento} &
+% DATE &
+% Data de nascimento do político. &
+% -- \\
+
+% \textbf{MANDATO} &
+% -- &
+% -- &
+% Entidade destinada a representar o mandato exercido por um político. &
+% Os atributos devem ser definidos conforme os dados necessários para representar o período e o cargo do mandato. \\
+
+% \textbf{PARTIDO} &
+% \texttt{numero} &
+% INT &
+% Número eleitoral do partido. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{sigla} &
+% VARCHAR &
+% Sigla do partido político. &
+% -- \\
+
+% &
+% \texttt{nome} &
+% VARCHAR &
+% Nome do partido político. &
+% -- \\
+
+% &
+% \texttt{vies\_politico} &
+% FLOAT &
+% Valor numérico utilizado para representar o viés político atribuído ao partido. &
+% Métrica calculada pelo sistema. \\
+
+% \textbf{POLITICO\_ELEICAO} &
+% \texttt{sq\_candidato} &
+% INT &
+% Identificador único da candidatura em uma determinada eleição. &
+% \textbf{PK}; identificador proveniente da base do TSE. \\
+
+% \textbf{ZONA\_ELEITORAL} &
+% \texttt{numero} &
+% INT &
+% Número identificador da zona eleitoral. &
+% Pode ser combinado com o município para identificação da zona. \\
+
+% \textbf{VOTACAO\_PARTIDO\_MUNZONA} &
+% \texttt{qt\_votos\_legenda\_validos} &
+% INT &
+% Quantidade de votos válidos atribuídos à legenda partidária na zona eleitoral. &
+% -- \\
+
+% &
+% \texttt{qt\_total\_votos\_leg\_validos} &
+% INT &
+% Quantidade total de votos válidos de legenda contabilizados. &
+% -- \\
+
+% &
+% \texttt{qt\_votos\_nominais\_validos} &
+% INT &
+% Quantidade de votos nominais válidos recebidos pelos candidatos. &
+% -- \\
+
+% \textbf{VOTACAO\_CANDIDATO\_MUNZONA} &
+% \texttt{qtd\_votos\_nominais} &
+% INT &
+% Quantidade de votos nominais recebidos pelo candidato em determinada zona eleitoral. &
+% -- \\
+
+% \textbf{PERFIL\_ELEITORADO\_MUNZONA} &
+% \texttt{ds\_grau\_escolaridade} &
+% VARCHAR &
+% Grau de escolaridade dos eleitores. &
+% Categoria de escolaridade utilizada pelo TSE. \\
+
+% &
+% \texttt{qtd\_eleitores} &
+% INT &
+% Quantidade de eleitores pertencentes à categoria de escolaridade informada. &
+% -- \\
+
+% \textbf{VOTACAO\_MUNICIPIO} &
+% \texttt{qt\_comparecimento} &
+% INT &
+% Quantidade de eleitores que compareceram para votar. &
+% -- \\
+
+% &
+% \texttt{qt\_brancos} &
+% INT &
+% Quantidade de votos brancos. &
+% -- \\
+
+% &
+% \texttt{qt\_nulos} &
+% INT &
+% Quantidade de votos nulos. &
+% -- \\
+
+% &
+% \texttt{qt\_abstencoes} &
+% INT &
+% Quantidade de eleitores que não compareceram à votação. &
+% -- \\
+
+% \textbf{RECEITA\_DE\_CAMPANHA} &
+% \texttt{cd\_receita} &
+% INT &
+% Identificador do registro de receita de campanha. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{vr\_receita} &
+% FLOAT &
+% Valor monetário da receita de campanha. &
+% Representado em reais. \\
+
+% &
+% \texttt{ds\_receita} &
+% VARCHAR &
+% Descrição ou classificação da origem da receita. &
+% -- \\
+
+% \textbf{DESPESA\_DE\_CAMPANHA} &
+% \texttt{cd\_despesa} &
+% INT &
+% Identificador do registro de despesa de campanha. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{sq\_despesa} &
+% VARCHAR &
+% Identificador sequencial do registro da despesa na base eleitoral. &
+% -- \\
+
+% &
+% \texttt{ds\_despesa} &
+% VARCHAR &
+% Descrição ou classificação da despesa de campanha. &
+% -- \\
+
+% &
+% \texttt{vr\_despesa\_contratada} &
+% FLOAT &
+% Valor contratado referente à despesa de campanha. &
+% Representado em reais. \\
+
+% \textbf{BEM} &
+% \texttt{vr\_bem\_candidato} &
+% FLOAT &
+% Valor declarado dos bens pertencentes ao candidato. &
+% Representado em reais. \\
+
+% \textbf{FORNECEDOR} &
+% \texttt{cpf\_cnpj\_fornecedor} &
+% VARCHAR &
+% CPF ou CNPJ do fornecedor relacionado à despesa de campanha. &
+% Identificador fiscal do fornecedor. \\
+
+% &
+% \texttt{numero} &
+% INT &
+% Identificador do fornecedor no modelo de dados. &
+% \textbf{PK}. \\
+
+% &
+% \texttt{ds\_cnae\_fornecedor} &
+% VARCHAR &
+% Código ou descrição da atividade econômica do fornecedor segundo a CNAE. &
+% -- \\
+
+% \textbf{MALHA\_MUNICIPIO} &
+% \texttt{geometria} &
+% JSON &
+% Representação geométrica dos limites territoriais do município. &
+% Pode armazenar geometria em formato compatível com dados geoespaciais, como GeoJSON. \\
+
+% \textbf{VIES\_MUNICIPIO} &
+% \texttt{ano\_eleitoral} &
+% INT &
+% Ano da eleição utilizada para o cálculo do viés político municipal. &
+% -- \\
+
+% &
+% \texttt{vies\_calculado} &
+% FLOAT &
+% Valor calculado que representa o viés político observado no município. &
+% Métrica calculada a partir dos resultados eleitorais. \\
+
+% \textbf{VOTACAO\_PARTIDO\_MUNICIPIO} &
+% \texttt{qt\_votos\_validos} &
+% INT &
+% Quantidade de votos válidos recebidos pelo partido no município. &
+% -- \\
+
+% &
+% \texttt{ano\_eleicao} &
+% INT &
+% Ano da eleição à qual a votação pertence. &
+% -- \\
+
+% \textbf{IBGE\_CENSO\_MUNICIPIO} &
+% \texttt{idade\_media\_populacao} &
+% FLOAT &
+% Idade média da população do município. &
+% Dado proveniente do Censo/IBGE. \\
+
+% &
+% \texttt{ano} &
+% INT &
+% Ano de referência do dado censitário. &
+% -- \\
+
+% \textbf{INDICES\_MUNICIPIO} &
+% \texttt{ano} &
+% INT &
+% Ano de referência dos indicadores municipais. &
+% -- \\
+
+% &
+% \texttt{idhm} &
+% FLOAT &
+% Índice de Desenvolvimento Humano Municipal. &
+% Indicador socioeconômico. \\
+
+% &
+% \texttt{pib} &
+% FLOAT &
+% Produto Interno Bruto do município. &
+% Valor monetário, conforme a fonte utilizada. \\
+
+% &
+% \texttt{mediana\_idade} &
+% INT &
+% Mediana da idade da população municipal. &
+% -- \\
+
+% &
+% \texttt{indice\_envelhecimento} &
+% INT &
+% Indicador que representa a relação entre a população idosa e a população jovem. &
+% Definição deve seguir a metodologia da fonte. \\
+
+% \hline
+% \end{longtable}
+% \end{flushleft}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{p{3cm} p{4cm} p{1.5cm} p{6cm} p{5cm}}
+\caption{Dicionário de Dados}
+\label{tab:dicionario_dados} \\
+
+\hline
+\textbf{Entidade} &
+\textbf{Campo} &
+\textbf{Tipo} &
+\textbf{Descrição} &
+\textbf{Restrições/Observações} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Entidade} &
+\textbf{Campo} &
+\textbf{Tipo} &
+\textbf{Descrição} &
+\textbf{Restrições/Observações} \\
+\hline
+\endhead
+
+\textbf{ELEICAO} &
+\texttt{cd\_eleicao} &
+INT &
+Identificador da eleição. &
+Identificador da eleição no TSE. \\
+
+&
+\texttt{ano} &
+INT &
+Ano em que a eleição ocorreu. &
+-- \\
+
+&
+\texttt{turno} &
+INT &
+Número do turno da eleição. &
+1 ou 2, conforme a eleição. \\
+
+&
+\texttt{tipo} &
+INT &
+Código do tipo de eleição. &
+Código utilizado pelo TSE. \\
+
+&
+\texttt{ds\_eleicao} &
+VARCHAR &
+Descrição ou denominação da eleição. &
+-- \\
+
+&
+\texttt{\seqsplit{quantidade\_de\_vagas}} &
+INT &
+Quantidade de vagas disponíveis no pleito para determinado cargo. &
+-- \\
+
+\textbf{CARGO} &
+\texttt{cod\_cargo} &
+INT &
+Identificador do cargo eletivo. &
+\textbf{PK}. \\
+
+&
+\texttt{ds\_cargo} &
+VARCHAR &
+Descrição do cargo conforme a base eleitoral. &
+-- \\
+
+&
+\texttt{nome} &
+VARCHAR &
+Nome padronizado do cargo. &
+-- \\
+
+\textbf{MUNICIPIO} &
+\texttt{cd\_municipio} &
+INT &
+Código identificador do município na base eleitoral. &
+\textbf{PK}. \\
+
+&
+\texttt{nm\_municipio} &
+VARCHAR &
+Nome do município. &
+-- \\
+
+&
+\texttt{cd\_ibge} &
+INT &
+Código do município segundo o IBGE. &
+FK para identificação territorial no IBGE. \\
+
+\textbf{UF} &
+\texttt{cd\_ibge} &
+INT &
+Código identificador da unidade federativa segundo o IBGE. &
+\textbf{PK}. \\
+
+&
+\texttt{sigla} &
+VARCHAR &
+Sigla da unidade federativa. &
+Ex.: PI, DF, SP. \\
+
+\textbf{POLITICO} &
+\texttt{cpf} &
+VARCHAR &
+CPF utilizado para identificar o político/candidato. &
+\textbf{PK}. \\
+
+&
+\texttt{nome} &
+VARCHAR &
+Nome do político. &
+-- \\
+
+&
+\texttt{\seqsplit{ds\_grau\_de\_instrucao}} &
+VARCHAR &
+Grau de instrução declarado pelo candidato. &
+Informação eleitoral. \\
+
+&
+\texttt{dt\_nascimento} &
+DATE &
+Data de nascimento do político. &
+-- \\
+
+\textbf{MANDATO} &
+-- &
+-- &
+Entidade destinada a representar o mandato exercido por um político. &
+Os atributos devem ser definidos conforme os dados necessários para representar o período e o cargo do mandato. \\
+
+\textbf{PARTIDO} &
+\texttt{numero} &
+INT &
+Número eleitoral do partido. &
+\textbf{PK}. \\
+
+&
+\texttt{sigla} &
+VARCHAR &
+Sigla do partido político. &
+-- \\
+
+&
+\texttt{nome} &
+VARCHAR &
+Nome do partido político. &
+-- \\
+
+&
+\texttt{vies\_politico} &
+FLOAT &
+Valor numérico utilizado para representar o viés político atribuído ao partido. &
+Métrica calculada pelo sistema. \\
+
+\textbf{\seqsplit{POLITICO\_ELEICAO}} &
+\texttt{sq\_candidato} &
+INT &
+Identificador único da candidatura em uma determinada eleição. &
+\textbf{PK}; identificador proveniente da base do TSE. \\
+
+\textbf{\seqsplit{ZONA\_ELEITORAL}} &
+\texttt{numero} &
+INT &
+Número identificador da zona eleitoral. &
+Pode ser combinado com o município para identificação da zona. \\
+
+\textbf{\seqsplit{VOTACAO\_PARTIDO\_MUNZONA}} &
+\texttt{\seqsplit{qt\_votos\_legenda\_validos}} &
+INT &
+Quantidade de votos válidos atribuídos à legenda partidária na zona eleitoral. &
+-- \\
+
+&
+\texttt{\seqsplit{qt\_total\_votos\_leg\_validos}} &
+INT &
+Quantidade total de votos válidos de legenda contabilizados. &
+-- \\
+
+&
+\texttt{\seqsplit{qt\_votos\_nominais\_validos}} &
+INT &
+Quantidade de votos nominais válidos recebidos pelos candidatos. &
+-- \\
+
+\textbf{\seqsplit{VOTACAO\_CANDIDATO\_MUNZONA}} &
+\texttt{qtd\_votos\_nominais} &
+INT &
+Quantidade de votos nominais recebidos pelo candidato em determinada zona eleitoral. &
+-- \\
+
+\textbf{\seqsplit{PERFIL\_ELEITORADO\_MUNZONA}} &
+\texttt{\seqsplit{ds\_grau\_escolaridade}} &
+VARCHAR &
+Grau de escolaridade dos eleitores. &
+Categoria de escolaridade utilizada pelo TSE. \\
+
+&
+\texttt{qtd\_eleitores} &
+INT &
+Quantidade de eleitores pertencentes à categoria de escolaridade informada. &
+-- \\
+
+\textbf{\seqsplit{VOTACAO\_MUNICIPIO}} &
+\texttt{qt\_comparecimento} &
+INT &
+Quantidade de eleitores que compareceram para votar. &
+-- \\
+
+&
+\texttt{qt\_brancos} &
+INT &
+Quantidade de votos brancos. &
+-- \\
+
+&
+\texttt{qt\_nulos} &
+INT &
+Quantidade de votos nulos. &
+-- \\
+
+&
+\texttt{qt\_abstencoes} &
+INT &
+Quantidade de eleitores que não compareceram à votação. &
+-- \\
+
+\textbf{\seqsplit{RECEITA\_DE\_CAMPANHA}} &
+\texttt{cd\_receita} &
+INT &
+Identificador do registro de receita de campanha. &
+\textbf{PK}. \\
+
+&
+\texttt{vr\_receita} &
+FLOAT &
+Valor monetário da receita de campanha. &
+Representado em reais. \\
+
+&
+\texttt{ds\_receita} &
+VARCHAR &
+Descrição ou classificação da origem da receita. &
+-- \\
+
+\textbf{\seqsplit{DESPESA\_DE\_CAMPANHA}} &
+\texttt{cd\_despesa} &
+INT &
+Identificador do registro de despesa de campanha. &
+\textbf{PK}. \\
+
+&
+\texttt{sq\_despesa} &
+VARCHAR &
+Identificador sequencial do registro da despesa na base eleitoral. &
+-- \\
+
+&
+\texttt{ds\_despesa} &
+VARCHAR &
+Descrição ou classificação da despesa de campanha. &
+-- \\
+
+&
+\texttt{vr\_despesa\_contratada} &
+FLOAT &
+Valor contratado referente à despesa de campanha. &
+Representado em reais. \\
+
+\textbf{BEM} &
+\texttt{vr\_bem\_candidato} &
+FLOAT &
+Valor declarado dos bens pertencentes ao candidato. &
+Representado em reais. \\
+
+\textbf{FORNECEDOR} &
+\texttt{cpf\_cnpj\_fornecedor} &
+VARCHAR &
+CPF ou CNPJ do fornecedor relacionado à despesa de campanha. &
+Identificador fiscal do fornecedor. \\
+
+&
+\texttt{numero} &
+INT &
+Identificador do fornecedor no modelo de dados. &
+\textbf{PK}. \\
+
+&
+\texttt{ds\_cnae\_fornecedor} &
+VARCHAR &
+Código ou descrição da atividade econômica do fornecedor segundo a CNAE. &
+-- \\
+
+\textbf{\seqsplit{MALHA\_MUNICIPIO}} &
+\texttt{geometria} &
+JSON &
+Representação geométrica dos limites territoriais do município. &
+Pode armazenar geometria em formato compatível com dados geoespaciais, como GeoJSON. \\
+
+\textbf{\seqsplit{VIES\_MUNICIPIO}} &
+\texttt{ano\_eleitoral} &
+INT &
+Ano da eleição utilizada para o cálculo do viés político municipal. &
+-- \\
+
+&
+\texttt{vies\_calculado} &
+FLOAT &
+Valor calculado que representa o viés político observado no município. &
+Métrica calculada a partir dos resultados eleitorais. \\
+
+\textbf{\seqsplit{VOTACAO\_PARTIDO\_MUNICIPIO}} &
+\texttt{qt\_votos\_validos} &
+INT &
+Quantidade de votos válidos recebidos pelo partido no município. &
+-- \\
+
+&
+\texttt{ano\_eleicao} &
+INT &
+Ano da eleição à qual a votação pertence. &
+-- \\
+
+\textbf{\seqsplit{IBGE\_CENSO\_MUNICIPIO}} &
+\texttt{idade\_media\_populacao} &
+FLOAT &
+Idade média da população do município. &
+Dado proveniente do Censo/IBGE. \\
+
+&
+\texttt{ano} &
+INT &
+Ano de referência do dado censitário. &
+-- \\
+
+\textbf{\seqsplit{INDICES\_MUNICIPIO}} &
+\texttt{ano} &
+INT &
+Ano de referência dos indicadores municipais. &
+-- \\
+
+&
+\texttt{idhm} &
+FLOAT &
+Índice de Desenvolvimento Humano Municipal. &
+Indicador socioeconômico. \\
+
+&
+\texttt{pib} &
+FLOAT &
+Produto Interno Bruto do município. &
+Valor monetário, conforme a fonte utilizada. \\
+
+&
+\texttt{mediana\_idade} &
+INT &
+Mediana da idade da população municipal. &
+-- \\
+
+&
+\texttt{indice\_envelhecimento} &
+INT &
+Indicador que representa a relação entre a população idosa e a população jovem. &
+Definição deve seguir a metodologia da fonte. \\
+
+\hline
+\end{longtable}
+
+
+
+% \lipsum[72]
+
+% \section{Considerações Finais}
+
+% \lipsum[74]
+

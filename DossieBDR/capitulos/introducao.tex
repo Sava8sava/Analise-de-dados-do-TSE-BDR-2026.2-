@@ -1,0 +1,75 @@
+% ----------------------------------------------------------
+% Introdução 
+% Capítulo sem numeração, mas presente no Sumário
+% ----------------------------------------------------------
+
+\chapter*[Introdução]{Introdução}
+\addcontentsline{toc}{chapter}{Introdução}
+
+% Este documento segue as normas estabelecidas pela~\citeonline[3.1-3.2]{NBR6028:2003}.
+
+% \section*{Figuras}\label{sec:figuras}
+% \addcontentsline{toc}{section}{figuras}
+
+% As normas da~\citeonline[3.1-3.2]{NBR6028:2003} especificam que o caption da figura deve vir abaixo da mesma.
+
+% A Figura~\ref{fig:log} ilustra...
+
+% \begin{figure}[htpb]
+%    \centering
+%    \includegraphics[scale=.3]{figs/logo}
+%    \caption{Breve explicação sobre a figura. Deve vir abaixo da mesma.}
+%    \label{fig:log}
+% \end{figure}
+
+% \section*{Tabelas}\label{sec:tabelas}
+% \addcontentsline{toc}{section}{tabelas}
+
+% A Tabela~\ref{tab:tabela} apresenta os resultados...
+
+% \begin{table}[htpb]
+%    \centering
+%    \caption{Breve explicação sobre a tabela. Deve vir acima da mesma.}\label{tab:tabela}
+%    \begin{tabular}{|l|c|c|c|c|c|c|r|}
+%         \hline
+%         \small{XX} & \small{FF} & \small{PP} & \small{YY} & \small{Yr} & \small{xY} & \small{Yx} & \small{ZZ} \\ \hline
+%                615 &    18      &     2558   &    0,9930  &    0,9930  &    0,9930  &    0,9930  &    0,9930  \\ \hline
+%                615 &    18      &     2558   &    0,9930  &    0,9930  &    0,9930  &    0,9930  &    0,9930  \\ \hline
+%                615 &    18      &     2558   &    0,9930  &    0,9930  &    0,9930  &    0,9930  &    0,9930  \\ \hline
+%                615 &    18      &     2558   &    0,9930  &    0,9930  &    0,9930  &    0,9930  &    0,9930  \\ \hline
+%                615 &    18      &     2558   &    0,9930  &    0,9930  &    0,9930  &    0,9930  &    0,9930  \\ \hline
+%    \end{tabular}
+% \end{table}
+
+\section*{Motivação}\label{sec:motivacao}
+\addcontentsline{toc}{section}{Do que se trata}
+
+% \lipsum[35]
+
+A grande motivação do trabalho aqui descrito é gerar informação a partir dos dados disponibilizados publicamente
+em relação a municípios, UFs, partidos e seus candidatos no contexto eleitoral brasileiro. Eles
+são oferecidos em alguns portais como TSE, IBGE, Datacand e alguns outros. Dados esses que, apesar de públicos, 
+só são interpretáveis, em sua maioria, utilizando-se ferramentas e técnicas distantes do público interessado. Nosso papel é buscar
+gerar valor a partir da geração desorganizada e, potencialmente, proposital de dados das instituições brasileiras. Vamos cruzar 
+diferentes fontes, visando a revelar relações que não poderiam ser observadas de outra maneira. 
+
+\section*{Objetivos}\label{sec:objetivos}
+\addcontentsline{toc}{section}{Objetivos}
+
+Dessa maneira, o foco se concentrará em quatro áreas: patrimônio, índices socioeconômicos, escolaridade e viés político. 
+Serão analisados
+os impactos de receita em período de eleição, relação da escolaridade com sucesso eleitoral, a influência da categoria do município
+no viés de seus representantes, manutenção do poder ao longo do tempo, entre outros.
+% \lipsum[36]
+
+\section*{APIs}\label{sec:apis}
+\addcontentsline{toc}{section}{APIs}
+
+\begin{itemize}
+    \item \textbf{SIDRA}: \url{https://apisidra.ibge.gov.br/values}
+    \item \textbf{Agregados}: \url{https://servicodados.ibge.gov.br/api/v3/agregados}
+    \item \textbf{Localidades}: \url{https://servicodados.ibge.gov.br/api/v1/localidades/municipios}
+    \item \textbf{Dados Abertos do TSE}: \url{https://dadosabertos.tse.jus.br/api/3/action/}
+    \item \textbf{Ipeadata}: \url{http://www.ipeadata.gov.br/api/odata4/}
+    \item \textbf{Datacand}: \url{https://divulgacandcontas.tse.jus.br/divulga/}
+\end{itemize}
