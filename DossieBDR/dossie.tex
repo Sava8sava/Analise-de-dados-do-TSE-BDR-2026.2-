@@ -11,8 +11,7 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,					% tamanho da fonte
-	openright,				% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,					% para impressão em verso e anverso. Oposto a oneside
+	oneside,					% evita páginas em branco entre capítulos
 	a4paper,					% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsculas
@@ -23,7 +22,7 @@
 	english,					% idioma adicional para hifenização
 	%french,					% idioma adicional para hifenização
 	%spanish,				% idioma adicional para hifenização
-	brazil					% o último idioma é o principal do documento
+	brazilian				% o último idioma é o principal do documento
 	]{abntex2}
 
 % ---------------------
@@ -63,13 +62,13 @@
 % ---------------------
 
 % Configurações de CITAÇÕES para abntex2
-\include{extras/conf_citacoes}
+\input{extras/conf_citacoes}
 
 % Inclusão de dados para CAPA e FOLHA DE ROSTO (título, autor, orientador, etc.)
-\include{extras/dados}
+\input{extras/dados}
 
 % Inclui Configurações de aparência do PDF Final
-\include{extras/conf_pdf}
+\input{extras/conf_pdf}
 
 % O tamanho da identação do parágrafo é dado por:
 \setlength{\parindent}{0.5cm}
