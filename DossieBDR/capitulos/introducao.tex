@@ -59,11 +59,26 @@ diferentes fontes, visando a revelar relações que não poderiam ser observadas
 Dessa maneira, o foco se concentrará em quatro áreas: patrimônio, índices socioeconômicos, escolaridade e viés político. 
 Serão analisados
 os impactos de receita em período de eleição, relação da escolaridade com sucesso eleitoral, a influência da categoria do município
-no viés de seus representantes, manutenção do poder ao longo do tempo, entre outros.
+no viés de seus representantes, manutenção do poder ao longo do tempo, entre outros. São os objetivos:
+
+\begin{itemize}
+
+    \item Gerar tabelas de banco seguindo o Modelo Relacional descrito;
+    \item Populá-las com dados extraídos das APIs descritas a seguir, usando scripts específicos;
+    \item Gerar queries que respondam as perguntas listadas;
+    \item Materializar as respostas em views;
+    \item Organizar as views em uma interface e publicizar
+\end{itemize}
 % \lipsum[36]
 
 \section*{APIs}\label{sec:apis}
 \addcontentsline{toc}{section}{APIs}
+
+A seguir, uma lista das APIs selecionadas para extrair os dados que irão popular as tabelas do banco de dados. Seus dados
+foram extraídos e organizados utilizando o software "crawler", fornecido pelo grupo de Lucas Vilarinho,
+Raimundo Nonato,
+Matheus Carneiro e
+Gabriel Araújo.
 
 \begin{itemize}
 
@@ -79,5 +94,10 @@ no viés de seus representantes, manutenção do poder ao longo do tempo, entre 
 
     \item \textbf{Datacand}: disponibiliza informações sobre candidaturas e candidatos, incluindo dados cadastrais, situação da candidatura, partido, cargo, bens declarados e outras informações associadas ao processo eleitoral. Essas informações podem ser cruzadas com os resultados das eleições e com os dados de prestação de contas para analisar características dos candidatos, patrimônio declarado, trajetória eleitoral e desempenho nas eleições. (Questões 1, 2, 4, 6 e 10)
 
+    \item \textbf{Atlas}: disponibiliza valor do IDHM de cada município em 2022 e 2024 (Questão 3)
 \end{itemize}
+
+Existem ainda os valores calculados do viés político de cada partido durante o período 2026.1 durante a disciplina.
+Esses dados serão essenciais para a formulação das respostas das questões que envolvem análise de espectro político 
+(Questões 3 e 7).
 

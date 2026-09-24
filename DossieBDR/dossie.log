@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.11)  23 SEP 2026 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.11)  24 SEP 2026 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -960,7 +960,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout2 = `capitulos/introducao.aux'.
 
  (./capitulos/introducao.tex
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 70.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 66.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
@@ -979,12 +979,12 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout2 = `capitulos/resultados.aux'.
 
  (./capitulos/resultados.tex
-<figs/der.png, id=88, 8222.72pt x 6205.1825pt>
+<figs/der.png, id=91, 8222.72pt x 6205.1825pt>
 File: figs/der.png Graphic file (type png)
 <use figs/der.png>
 Package pdftex.def Info: figs/der.png  used on input line 8.
 (pdftex.def)             Requested size: 411.1601pt x 310.2773pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 410.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 413.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1010,18 +1010,18 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21036 strings out of 474222
- 345274 string characters out of 5748733
- 1996975 words of memory out of 5000000
- 42763 multiletter control sequences out of 15000+600000
- 619229 words of font info for 130 fonts, out of 8000000 for 9000
+ 21049 strings out of 474222
+ 345430 string characters out of 5748733
+ 1999975 words of memory out of 5000000
+ 42771 multiletter control sequences out of 15000+600000
+ 619411 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,107p,1161b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,107p,1237b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on dossie.pdf (13 pages, 2223874 bytes).
+Output written on dossie.pdf (13 pages, 2226454 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 37539 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 37547 words of extra memory for PDF output out of 42996 (max. 10000000)
 

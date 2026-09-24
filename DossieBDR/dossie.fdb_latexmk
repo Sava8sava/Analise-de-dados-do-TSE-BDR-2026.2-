@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex dossie.idx"] 1790110837.97626 "dossie.idx" "dossie.ind" "dossie" 1790214969.41997 0
-  "dossie.idx" 1790214967.48437 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex dossie.idx"] 1790259553.02141 "dossie.idx" "dossie.ind" "dossie" 1790260605.29063 0
+  "dossie.idx" 1790260603.41697 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "dossie.ilg"
   "dossie.ind"
   (rewritten before read)
-["pdflatex"] 1790214967.00191 "/home/salesman/LaTeX/Analise-de-dados-do-TSE-BDR-2026.2-/DossieBDR/dossie.tex" "dossie.pdf" "dossie" 1790214969.42009 0
+["pdflatex"] 1790260602.86253 "/home/salesman/LaTeX/Analise-de-dados-do-TSE-BDR-2026.2-/DossieBDR/dossie.tex" "dossie.pdf" "dossie" 1790260605.29079 0
   "/etc/texmf/web2c/texmf.cnf" 1770837131.22922 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/salesman/LaTeX/Analise-de-dados-do-TSE-BDR-2026.2-/DossieBDR/dossie.tex" 1790214451.02494 6294 73f181d7ccf2540ead63c83f431ced2a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -173,22 +173,22 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1770837157.33239 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1770837206 8213703 b81448db47648b7ff31171c5680eee33 ""
-  "capitulos/introducao.aux" 1790214967.63546 2788 171a701c768cd136dd9ed8459c698fcd "pdflatex"
-  "capitulos/introducao.tex" 1790214966.12422 5899 4814755f02be669fcfcbe08ad42c490c ""
-  "capitulos/proposta.aux" 1790214967.65535 4094 0da7c8222dcee30419ed86171b67e7a0 "pdflatex"
-  "capitulos/proposta.tex" 1790199625.36165 2194 4ac0527d3229bbd8219911e65e750059 ""
-  "capitulos/resultados.aux" 1790214969.3409 3744 b0518d9f9800d050b5c0de6beb1ad87b "pdflatex"
-  "capitulos/resultados.tex" 1790214451.00506 18790 e3d44e11d3abb2600cb803004fe29ab9 ""
-  "dossie.aux" 1790214969.3409 9625 c5813c9cf758c01fc2521fdcb858e1b9 "pdflatex"
-  "dossie.ind" 1790203142.17258 0 d41d8cd98f00b204e9800998ecf8427e "makeindex dossie.idx"
+  "capitulos/introducao.aux" 1790260603.5773 2788 171a701c768cd136dd9ed8459c698fcd "pdflatex"
+  "capitulos/introducao.tex" 1790260602.58012 6934 acc4dfcb11265317c66aed9d3684ab17 ""
+  "capitulos/proposta.aux" 1790260603.59685 4182 6f5bc0b46ecd28bc0f297a04db2ce7a6 "pdflatex"
+  "capitulos/proposta.tex" 1790258813.68269 2566 1db55f2dae1fceef3076a9bbe9118221 ""
+  "capitulos/resultados.aux" 1790260605.20405 3870 d7bb4049b25f6e251fc7c09b773f8191 "pdflatex"
+  "capitulos/resultados.tex" 1790257696.32201 18880 c947840e9be96ffe647e137e5bbf1f46 ""
+  "dossie.aux" 1790260605.20405 10918 7b4b2437f47b8af80b488436226ecd6a "pdflatex"
+  "dossie.ind" 1790259553.11709 0 d41d8cd98f00b204e9800998ecf8427e "makeindex dossie.idx"
   "dossie.tex" 1790214451.02494 6294 73f181d7ccf2540ead63c83f431ced2a ""
-  "dossie.toc" 1790214969.34487 2137 aa8e2114eb9f39877f82d30a6548711f "pdflatex"
+  "dossie.toc" 1790260605.21187 2310 eb4663d1aa5d697bde0f17b145a9aa0f "pdflatex"
   "extras/conf_citacoes.tex" 1790199625.37998 458 f56613b92007496f80465e8e3cce73a5 ""
   "extras/conf_pdf.tex" 1790214451.02494 727 0e66c7b2e1c31f1b12b1aad3bb737bd2 ""
   "extras/dados.tex" 1790199625.37998 926 1314db898a0db362f6c6268a7d3e1439 ""
   "figs/der.png" 1790199625.39098 2418177 8b7caf33f8ece3539ba6ccab620578ea ""
   "figs/logo.pdf" 1790199625.39465 993433 3420d021a83a5893fda8fbce7a44048c ""
-  "pretextual/capa.aux" 1790214967.58775 2137 511c9b01d7e63bb0787174644167ac1c "pdflatex"
+  "pretextual/capa.aux" 1790260603.53037 2137 511c9b01d7e63bb0787174644167ac1c "pdflatex"
   "pretextual/capa.tex" 1790214451.02494 631 a24eac7c7aba41d2fccd392f859ec352 ""
   (generated)
   "capitulos/introducao.aux"
